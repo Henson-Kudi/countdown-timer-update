@@ -1,0 +1,92 @@
+/* *{
+    box-sizing: border-box;
+    margin: 0;
+    
+} */
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: rgb(192, 145, 236);
+  color: rgb(255, 255, 255);
+  font-size: 1.6rem;
+}
+
+.main {
+  display: grid;
+  width: 100%;
+  place-items: center;
+}
+.hero h1 {
+  padding: 0.8rem;
+  text-transform: uppercase;
+  font-size: 5rem;
+  text-shadow: 1px -1px 1px grey, 1px -2px 1px grey, 1px -3px 1px grey,
+    1px -4px 1px grey, 1px -5px 1px grey, 1px -6px 1px grey, 1px -7px 1px grey,
+    1px -8px 1px grey, 1px -9px 1px grey, 1px -10px 1px grey,
+    1px -18px 6px rgba(16, 16, 16, 0.4), 1px -22px 10px rgba(16, 16, 16, 0.2),
+    1px -25px 35px rgba(16, 16, 16, 0.2), 1px -30px 60px rgba(16, 16, 16, 0.4);
+
+  box-shadow: 1px -1px 1px grey, 1px -2px 1px grey, 3px -3px 1px grey,
+    1px -4px 1px grey, 5px -5px 1px grey, 1px -6px 1px grey, 7px -7px 1px grey,
+    1px -8px 1px grey, 9px -9px 1px grey, 1px -10px 1px grey,
+    18px -18px 6px rgba(16, 16, 16, 0.4), 22px -22px 10px rgba(16, 16, 16, 0.2),
+    25px -25px 35px rgba(16, 16, 16, 0.2), 30px -30px 60px rgba(16, 16, 16, 0.4);
+
+  animation: up-down 1s infinite 0s forwards alternate ease-in;
+}
+
+@keyframes up-down {
+  0% {
+    transform: rotate(-20deg);
+  }
+  100% {
+    transform: rotate(20deg);
+    color: gray;
+  }
+}
+
+.hero p {
+  margin: 1rem 0;
+  font-family: "Great Vibes", cursive;
+  font-size: 4rem;
+  letter-spacing: 0.5rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+.time-stamp {
+  display: grid;
+  font-size: 1.5rem;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  justify-content: space-around;
+  gap: 1rem;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.time {
+  background-color: rgb(113, 61, 161);
+  padding: 0 1rem;
+  border-radius: 5%;
+}
+
+@media screen and (max-width: 500px) {
+  .time-stamp {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  body {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .main {
+    display: block;
+    width: 100%;
+  }
+  .hero h1 {
+    padding: 0;
+    text-transform: uppercase;
+    font-size: 3.5rem;
+  }
+}
